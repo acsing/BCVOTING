@@ -4,7 +4,7 @@ import {Table,Container,Button} from "react-bootstrap"
 
 const Home = props => {
 
-        const promptList=["Test Poll 1","Test Poll 2"]
+        const promptList=["Who's the best student?","Who should be class president?"]
 
     return (
         <Container>
@@ -23,7 +23,7 @@ const Home = props => {
                             <tr key={index}>
                                 <td>{index+1}</td>
                                 <td>{el}</td>
-                                <td><Button>Go to Poll</Button></td>
+                                <td><Button onClick={()=>props.changeCandidates(el)}>Go to Poll</Button></td>
                             </tr>
                          );
                         })}
